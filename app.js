@@ -1,4 +1,4 @@
-// SAYUR FRESH EFFENDI — CUSTOMER STORE + FIRESTORE
+// SAYUR BABA EFFENDI — CUSTOMER STORE + FIRESTORE
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import {
     getFirestore, collection, onSnapshot
