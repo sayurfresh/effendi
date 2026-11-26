@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#174D32"><title>Checkout | SAYUR FRESH EFFENDI</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="checkout.css"><script type="module" src="checkout.js"></script>
+</head>
+<body class="admin-body">
+  <div class="announcement">🌿 SAYUR SEGAR SETIAP HARI · PESAN MUDAH, ANTAR KE RUMAH</div>
+  <header class="admin-topbar"><a class="brand" href="index.html"><div class="brand-icon">🌿</div><div class="brand-text"><h2>SAYUR FRESH</h2><span>EFFENDI</span></div></a><a class="admin-link" href="index.html">← Kembali belanja</a></header>
+  <main class="checkout-wrap">
+    <div class="admin-kicker">PESANAN ANDA</div><h1>Checkout</h1><p class="checkout-intro">Periksa pesanan dan lengkapi data pengiriman Anda.</p>
+    <div class="checkout-grid">
+      <form id="checkout-form" class="admin-card checkout-form">
+        <h2>Informasi pelanggan</h2>
+        <label for="customer-name">Nama lengkap</label><input id="customer-name" required maxlength="100" autocomplete="name">
+        <label for="customer-phone">Nomor WhatsApp</label><input id="customer-phone" required type="tel" maxlength="25" autocomplete="tel" placeholder="Contoh: 081234567890">
+        <label for="customer-address">Alamat pengiriman</label><textarea id="customer-address" required rows="3" maxlength="500" autocomplete="street-address"></textarea>
+        <label for="customer-note">Catatan pesanan (opsional)</label><textarea id="customer-note" rows="2" maxlength="500" placeholder="Patokan rumah, waktu pengiriman, dll."></textarea>
+        <h2 class="checkout-subhead">Pesanan tambahan di luar katalog</h2>
+        <p class="checkout-help">Isi jika ada barang lain yang ingin dipesan. Admin akan mengonfirmasi ketersediaan dan harga.</p>
+        <div id="custom-items"></div>
+        <button type="button" class="checkout-add-row" id="add-custom-item">+ Tambah barang khusus</button>
+        <h2 class="checkout-subhead">Metode pembayaran</h2>
+        <label class="checkout-radio"><input type="radio" name="payment" value="Transfer BCA" checked><span><b>Transfer BCA</b><small>Admin akan memberikan detail rekening saat konfirmasi.</small></span></label>
+        <label class="checkout-radio"><input type="radio" name="payment" value="COD"><span><b>COD (Bayar saat barang diterima)</b><small>Pembayaran kepada kurir saat pesanan diterima.</small></span></label>
+        <button class="admin-primary checkout-submit" type="submit" id="submit-order">Kirim pesanan ke WhatsApp</button>
+        <div id="checkout-message" class="admin-message" role="status"></div>
+      </form>
+      <aside class="admin-card checkout-summary"><h2>Ringkasan belanja</h2><div id="checkout-lines"></div><div class="checkout-total"><span>Subtotal produk katalog</span><strong id="checkout-total">Rp0</strong></div><p class="checkout-help">Ongkos kirim dan harga barang khusus akan dikonfirmasi admin melalui WhatsApp. Pesanan dicatat terlebih dahulu ke sistem toko.</p></aside>
+    </div>
+  </main>
+</body>
+</html>

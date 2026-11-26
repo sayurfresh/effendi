@@ -1,0 +1,24 @@
+/* CUSTOMER CHECKOUT */
+.checkout-wrap{max-width:1100px;margin:auto;padding:42px 22px 70px}
+.checkout-wrap h1{margin:8px 0;color:var(--green-dark);font:36px "Playfair Display",Georgia,serif}
+.checkout-intro,.checkout-help{color:var(--muted);font-size:11px;line-height:1.7}
+.checkout-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:start;margin-top:22px}
+.checkout-form,.checkout-summary{display:grid;gap:10px}
+.checkout-form h2,.checkout-summary h2{margin:0 0 8px;color:var(--green-dark);font-size:16px}
+.checkout-subhead{margin-top:18px!important;padding-top:16px;border-top:1px solid var(--border)}
+.checkout-form textarea{resize:vertical}
+.checkout-radio{display:flex;align-items:flex-start;gap:10px;padding:13px;border:1px solid var(--border);border-radius:9px;cursor:pointer}
+.checkout-radio input{margin-top:3px;accent-color:var(--green)}
+.checkout-radio span,.checkout-radio small{display:block}
+.checkout-radio b{font-size:11px;color:var(--green-dark)}
+.checkout-radio small{margin-top:4px;color:var(--muted);font-size:9px}
+.checkout-line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:10px}
+.checkout-line small{display:block;color:var(--muted);margin-top:4px}
+.checkout-total{display:flex;justify-content:space-between;gap:10px;margin-top:15px;padding-top:15px;border-top:1px solid var(--border);font-size:11px;color:var(--green-dark)}
+.checkout-total strong{font-size:18px}
+.checkout-submit{margin-top:12px;min-height:48px}
+.checkout-add-row{border:1px dashed #9dbca2;border-radius:8px;background:var(--green-soft);color:var(--green-dark);padding:11px;font-size:10px;font-weight:700;cursor:pointer}
+.custom-row{display:grid;grid-template-columns:1.2fr .7fr 36px;gap:8px;margin:8px 0}
+.custom-row input{min-width:0!important}
+.custom-row button{border:1px solid #eadada;border-radius:7px;background:#fff;color:#a33;cursor:pointer}
+@media(max-width:760px){.checkout-grid{grid-template-columns:1fr}.checkout-wrap{padding:30px 14px 50px}}
