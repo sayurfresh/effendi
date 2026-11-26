@@ -1,4 +1,4 @@
-// SAYUR FRESH EFFENDI — Admin sederhana: Produk, Pesanan Masuk, Riwayat, Rekap Pesanan
+// SAYUR BABA EFFENDI — Admin sederhana: Produk, Pesanan Masuk, Riwayat, Rekap Pesanan
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
