@@ -1,0 +1,60 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email == "jnto162@gmail.com";
+    }
+
+    // Katalog bisa dibaca pelanggan; hanya admin yang boleh mengubah.
+    match /product/{productId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Pelanggan tanpa login hanya boleh membuat pesanan baru.
+    // Admin dapat membaca, memperbarui status/rincian, dan menghapus.
+    match /orders/{orderId} {
+      allow create: if request.resource.data.keys().hasAll([
+          'customer', 'items', 'customItems', 'payment',
+          'subtotal', 'status', 'createdAt', 'createdAtClient'
+        ])
+        && request.resource.data.customer is map
+        && request.resource.data.customer.keys().hasAll(['name','phone','address','note'])
+        && request.resource.data.customer.name is string
+        && request.resource.data.customer.name.size() > 0
+        && request.resource.data.customer.name.size() <= 100
+        && request.resource.data.customer.phone is string
+        && request.resource.data.customer.phone.size() > 0
+        && request.resource.data.customer.phone.size() <= 25
+        && request.resource.data.customer.address is string
+        && request.resource.data.customer.address.size() > 0
+        && request.resource.data.customer.address.size() <= 500
+        && request.resource.data.items is list
+        && request.resource.data.items.size() <= 50
+        && request.resource.data.customItems is list
+        && request.resource.data.customItems.size() <= 20
+        && request.resource.data.payment in ['Transfer BCA', 'COD']
+        && request.resource.data.subtotal is number
+        && request.resource.data.subtotal >= 0
+        && request.resource.data.status == 'new';
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Pengaturan toko dapat dibaca halaman checkout untuk nomor WA/status toko.
+    // Hanya admin dapat membuat atau mengubah pengaturan.
+    match /settings/{settingId} {
+      allow read: if settingId == "store";
+      allow write: if isAdmin();
+    }
+
+    // Catatan stok dan biaya hanya boleh diakses admin.
+    match /stockMovements/{movementId} {
+      allow read, create, update, delete: if isAdmin();
+    }
+    match /expenses/{expenseId} {
+      allow read, create, update, delete: if isAdmin();
+    }
+  }
+}

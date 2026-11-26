@@ -1,0 +1,19 @@
+SAYUR FRESH EFFENDI — DASHBOARD ADMIN SEDERHANA
+
+Menu admin yang dipertahankan:
+1. Produk — tambah, edit, hapus produk; hanya harga jual, tanpa harga modal dan stok.
+2. Pesanan masuk — melihat pesanan aktif, mengubah status, membuka detail, dan mencetak nota.
+3. Riwayat — pesanan selesai/dibatalkan, pencarian dan filter.
+4. Rekap pesanan — filter periode, ringkasan jumlah pesanan dan nilai pesanan, serta ekspor CSV.
+
+Cloudinary:
+Cloud name: ihskdwwj
+Unsigned upload preset: sayurfresh_upload
+Foto dipilih dari dashboard admin dan URL-nya disimpan di Firestore. Jangan masukkan API Secret ke file JavaScript.
+
+Catatan penting:
+- Kode toko pelanggan juga diubah agar tidak membatasi keranjang berdasarkan stok.
+- Data lama di Firestore tidak dihapus. Field costPrice/stock lama mungkin masih tersimpan di dokumen lama, tetapi dashboard ini tidak menampilkan atau menggunakannya.
+- Status pesanan tidak lagi mengurangi atau mengembalikan stok.
+- Firestore Rules tetap perlu mengizinkan admin membaca/menulis koleksi product dan membaca/memperbarui orders.
+- Uji login, tambah/edit produk, checkout, perubahan status, dan ekspor rekap setelah dipasang.
