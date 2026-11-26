@@ -3,7 +3,7 @@ import { getFirestore, collection, addDoc, doc, getDoc, serverTimestamp } from "
 const firebaseConfig={apiKey:"AIzaSyD6fyP1mdM5xdL1euUcfTLZyFEzvcZGxY0",authDomain:"sayurfresh-8ceb8.firebaseapp.com",projectId:"sayurfresh-8ceb8",storageBucket:"sayurfresh-8ceb8.firebasestorage.app",messagingSenderId:"318005839589",appId:"1:318005839589:web:9001d01a61b3f84fcf760c",measurementId:"G-MEPJ8ZBJNQ"};
 const app=initializeApp(firebaseConfig),db=getFirestore(app);
 const $=id=>document.getElementById(id);
-let waNumber="6282148764748";
+let waNumber="6281258019993";
 let cart=[];
 try{cart=JSON.parse(localStorage.getItem("sayurFreshCheckout")||"[]");if(!Array.isArray(cart))cart=[];}catch{cart=[];}
 cart=cart.filter(x=>x&&typeof x.name==="string"&&Number.isFinite(Number(x.price))&&Number.isInteger(x.quantity)&&x.quantity>0);
