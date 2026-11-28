@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#174D32">
+
+    <title>SAYUR BABA EFFENDI | Belanja Sayur Segar</title>
+
+    <meta name="description" content="Belanja sayuran, daging, dan seafood segar dengan mudah di SAYUR BABA EFFENDI. Pilih produk favorit dan pesan langsung dari rumah.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+    <!-- TOP ANNOUNCEMENT -->
+    <div class="announcement">
+        <span>🌿</span>
+        SAYUR SEGAR SETIAP HARI · PESAN MUDAH, ANTAR KE RUMAH
+    </div>
+
+    <!-- INFO CLOSE ORDER -->
+    <div class="announcement close-order-announcement" role="note" aria-label="Informasi batas waktu pemesanan">
+        <div class="close-order-track">
+            <span>⏰</span>
+            <strong>CLOSE ORDER 23.59 WIB</strong>
+            <span>· Pesan hari ini, kami siapkan besok pagi dan antar sesuai jadwal.</span>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="brand">
+                <div class="brand-icon">🌿</div>
+
+                <div class="brand-text">
+                    <h2>SAYUR BABA</h2>
+                    <span>EFFENDI</span>
+                </div>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="#home" class="active">Beranda</a>
+                <a href="#categories">Kategori</a>
+                <a href="#products">Produk</a>
+                <a href="#about">Tentang Kami</a>
+                
+            </nav>
+
+            <div class="header-actions">
+
+                <button class="icon-button" id="search-focus" aria-label="Cari produk">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m16 16 5 5"></path>
+                    </svg>
+                </button>
+
+                <button class="cart-button" id="open-cart">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 3h2l2.5 12h11l2-8H6"></path>
+                        <circle cx="9" cy="19" r="1.5"></circle>
+                        <circle cx="18" cy="19" r="1.5"></circle>
+                    </svg>
+
+                    <span class="cart-label">Keranjang</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    <span class="pulse-dot"></span>
+                    SEGAR · ALAMI · BERKUALITAS
+                </div>
+
+                <h1>
+                    Semua Kebutuhan Dapur<br>
+                    <span>Ada di Sini</span>
+                </h1>
+
+                <p>
+                    Temukan sayuran segar, daging berkualitas, seafood, dan aneka bahan makanan pilihan. Belanja lebih mudah dan praktis untuk memenuhi kebutuhan dapur keluarga Anda.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#products" class="btn-primary">
+                        Belanja Sekarang
+                        <span>→</span>
+                    </a>
+
+                    <a href="#categories" class="btn-secondary">
+                        Jelajahi Kategori
+                    </a>
+                </div>
+
+                <div class="hero-features">
+
+                    <div>
+                        <span>🌱</span>
+                        <p>Produk Segar</p>
+                    </div>
+
+                    <div>
+                        <span>🚚</span>
+                        <p>Antar ke Rumah</p>
+                    </div>
+
+                    <div>
+                        <span>🛒</span>
+                        <p>Belanja Mudah</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="/hero-market.png"
+                    alt="Aneka sayuran, daging, dan seafood segar"
+                >
+
+                <div class="floating-card">
+                    <div class="floating-icon">🌿</div>
+                    <div>
+                        <strong>Fresh Market</strong>
+                        <small>Sayur · Daging · Seafood</small>
+                    </div>
+                </div>
+
+                <div class="hero-decoration"></div>
+            </div>
+
+        </section>
+
+
+        <!-- BENEFITS -->
+        <section class="benefits">
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🥬</div>
+                <div>
+                    <strong>Sayur, Daging & Seafood</strong>
+                    <small>Produk pilihan</small>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🚚</div>
+                <div>
+                    <strong>Pengiriman</strong>
+                    <small>Diantar ke alamat Anda</small>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">💳</div>
+                <div>
+                    <strong>Pembayaran Mudah</strong>
+                    <small>COD dan transfer</small>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">💚</div>
+                <div>
+                    <strong>Belanja Praktis</strong>
+                    <small>Tanpa perlu akun</small>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORIES -->
+        <section class="section categories-section" id="categories">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">PILIH KEBUTUHAN ANDA</span>
+                    <h2>Belanja Berdasarkan Kategori</h2>
+                    <p>Temukan berbagai kebutuhan dapur Anda.</p>
+                </div>
+            </div>
+
+            <div class="category-grid">
+
+                <button class="category-card active" data-category="Semua">
+                    <div class="category-image">🥬</div>
+                    <strong>Semua</strong>
+                </button>
+
+                <button class="category-card" data-category="Sayuran">
+                    <div class="category-image">🥦</div>
+                    <strong>Sayuran</strong>
+                </button>
+
+                <button class="category-card" data-category="Daging">
+                    <div class="category-image">🥩</div>
+                    <strong>Daging</strong>
+                </button>
+
+                <button class="category-card" data-category="Seafood">
+                    <div class="category-image">🦐</div>
+                    <strong>Seafood</strong>
+                </button>
+
+                <button class="category-card" data-category="Buah">
+                    <div class="category-image">🍎</div>
+                    <strong>Buah</strong>
+                </button>
+
+                <button class="category-card" data-category="Bumbu">
+                    <div class="category-image">🧄</div>
+                    <strong>Bumbu</strong>
+                </button>
+
+                <button class="category-card" data-category="Lainnya">
+                    <div class="category-image">🥔</div>
+                    <strong>Lainnya</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS -->
+        <section class="section products-section" id="products">
+
+            <div class="products-heading">
+
+                <div>
+                    <span class="section-label">PILIHAN TERBAIK</span>
+                    <h2>Produk Segar Pilihan</h2>
+                    <p>Lengkapi kebutuhan dapur Anda hari ini.</p>
+                </div>
+
+                <div class="product-search">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m16 16 5 5"></path>
+                    </svg>
+
+                    <input
+                        type="search"
+                        id="product-search"
+                        placeholder="Cari sayur, daging, seafood..."
+                    >
+                </div>
+
+                <a href="checkout.html" class="custom-order-link">Tidak menemukan barang yang dicari? Pesan barang khusus →</a>
+
+            </div>
+
+            <div class="product-grid" id="product-list">
+
+                <div class="loading-products">
+                    Memuat produk...
+                </div>
+
+            </div>
+
+            <div class="empty-products" id="empty-products" hidden>
+                <span>🥬</span>
+                <h3>Produk tidak ditemukan</h3>
+                <p>Coba gunakan nama produk yang lain.</p>
+            </div>
+
+        </section>
+
+
+        <!-- PROMO BANNER -->
+        <section class="promo-section">
+
+            <div class="promo-content">
+                <span>FRESH FROM NATURE</span>
+
+                <h2>
+                    Kebutuhan Dapur<br>
+                    Lebih Mudah.
+                </h2>
+
+                <p>
+                    Belanja sayuran, daging, dan seafood pilihan tanpa harus keluar rumah.
+                </p>
+
+                <a href="#products" class="promo-button">
+                    Mulai Belanja →
+                </a>
+            </div>
+
+            <div class="promo-visual">
+                <img
+                    src="https://images.unsplash.com/photo-1518843875459-f738682238a6?w=700&q=85"
+                    alt="Sayuran segar"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about-section" id="about">
+
+            <div class="about-icon">🌿</div>
+
+            <span class="section-label">SAYUR BABA EFFENDI</span>
+
+            <h2>Kesegaran untuk Setiap Keluarga</h2>
+
+            <p>
+                 Kami hadir untuk memenuhi kebutuhan dapur keluarga Anda dengan pilihan sayuran segar, daging berkualitas, seafood, dan aneka bahan makanan lainnya. Belanja lebih praktis, mudah, dan nyaman.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <h2>🌿 SAYUR BABA EFFENDI</h2>
+
+                <p>
+                    Sayur segar, belanja mudah,
+                    langsung ke rumah Anda.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <strong>Navigasi</strong>
+                <a href="#home">Beranda</a>
+                <a href="#categories">Kategori</a>
+                <a href="#products">Produk</a>
+            </div>
+
+            <div class="footer-links">
+                <strong>Layanan</strong>
+                <a href="#products">Belanja Produk</a>
+                <a href="#about">Tentang Kami</a>
+                
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 SAYUR BABA EFFENDI. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- CART DRAWER -->
+    <aside class="cart-drawer" id="cart-drawer">
+
+        <div class="cart-header">
+            <div>
+                <h2>Keranjang Belanja</h2>
+                <small id="cart-subtitle">0 produk dipilih</small>
+            </div>
+
+            <button class="close-cart" id="close-cart" aria-label="Tutup keranjang">
+                ×
+            </button>
+        </div>
+
+        <div class="cart-items" id="cart-items">
+
+            <div class="cart-empty">
+                <span>🛒</span>
+                <h3>Keranjang masih kosong</h3>
+                <p>Yuk, pilih produk favorit Anda.</p>
+            </div>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <strong id="cart-total">Rp0</strong>
+            </div>
+
+            <p>Ongkos kirim akan ditentukan oleh admin.</p>
+
+            <button class="checkout-button" id="checkout-button">
+                Lanjut Checkout →
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- NOTIFICATION -->
+    <div class="toast" id="toast"></div>
+
+
+</body>
+</html>
